@@ -104,6 +104,9 @@ function oddOrEven(i){
     if (i % 2 == 0) {
         console.log("El número es par");
         document.write("El número es par");
+    }else{
+        console.log("El número es par");
+        document.write("El número es impar");
     }
 }
 oddOrEven(78);
@@ -159,3 +162,146 @@ function wheelSize(){
     console.log("El coche tiene unas ruedas de", wheel.size, "cm de diametro");
     document.write("El coche tiene unas ruedas", wheel.size, "cm de diametro");
 }
+
+
+//Crear un array de 10 números
+let numbers= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+
+
+/*Crear una función que imprima en consola todos los números de un array (Investigar ciclo for)*/
+function numbersOnConsole(){
+    let i;
+    for(i=0; i<10;i++){
+        console.log(numbers[i]);
+    }
+}
+numbersOnConsole();
+
+document.write("<br><br><br>");
+
+
+
+
+/*Crear una función que añada un número al array*/
+function newNumber(i){
+    numbers.push(i);
+}
+
+newNumber(17);
+console.log(numbers);
+
+
+
+/*Crear una función que elimine los números pares de ese array.*/
+function evenOut(array){
+    let i;
+    for(i=0; i<array.length; i++){
+        if (array[i]%2==0){
+            array.splice(i, 1);
+            i=0;
+        }
+    }
+}
+evenOut(numbers);
+console.log(numbers);
+
+
+
+
+/*Crear una función que devuelva el número mayor de un array. */
+function higherNumber(array){
+    console.log(Math.max(...array));
+    /*
+                
+            let higher=0;
+            for(i = 0; i < array.length; i++){
+
+                if (array[i] > higher){
+                    higher = array[i];
+                }
+
+            } 
+            console.log(higher);
+    */
+}
+
+higherNumber(numbers);
+
+
+
+
+/*Crear una función que devuelva el número menor de un array. */
+function lowerNumber(array){
+    console.log(Math.min(...array));
+    /*
+                
+            let lower=0;
+            for(i = 0; i < array.length; i++){
+
+                if (array[i] < lower){
+                    lower = array[i];
+                }
+
+            } 
+            console.log(lower);
+    */
+}
+
+lowerNumber(numbers);
+
+
+
+
+/*Crear un función que convierta en minúsculas todas las letras de un texto.*/
+let phraseUpperCase1 = "HELLO THERE";
+
+function convertToLowerCase(i){
+    return i.toLowerCase();
+}
+console.log(phraseUpperCase1);
+phraseUpperCase1 = convertToLowerCase(phraseUpperCase1);
+console.log(phraseUpperCase1);
+
+
+
+
+/*Crear una función que convierta en mayúsculas todas las letras de un texto. */
+let phraseLowerCase1 = "general kenobi";
+
+function convertToUpperCase(i){
+    return i.toUpperCase();
+}
+console.log(phraseLowerCase1);
+phraseLowerCase1 = convertToUpperCase(phraseLowerCase1);
+console.log(phraseLowerCase1);
+
+
+
+
+/*Crear una función que reciba un array de nombres y que convierta la primera letra de cada nombre en
+mayúscula. */
+let ourNames = ["santi", "rocío", "miguel"];
+
+
+function firstLetterToUpperCase(array){
+    let i;
+    let firstLetter = "";
+    let otherLetters = "";
+    for(i=0; i<array.length; i++){
+        firstLetter=array[i].charAt(0);
+        firstLetter = firstLetter.toUpperCase();
+        otherLetters = array[i].slice(1);
+        array[i] = firstLetter+otherLetters;
+    }
+    return array;
+}
+
+
+console.log(firstLetterToUpperCase(ourNames));
+
+
+
+
+/*Crear un botón en HTML y usar JavaScript para mostrar un mensaje cuando se hace clic. */
