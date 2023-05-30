@@ -303,5 +303,21 @@ console.log(firstLetterToUpperCase(ourNames));
 
 
 
+window.onload = function(){
+
 
 /*Crear un botón en HTML y usar JavaScript para mostrar un mensaje cuando se hace clic. */
+let domExercises = document.getElementById("domExercises");
+let domButton = document.createElement("button");
+
+
+
+domExercises.appendChild(domButton);
+
+domButton.innerHTML = "Haz Click";
+
+domButton.addEventListener("click", function(){
+    alert("¿Cómo están los máquinas?, lo primero de todo");
+})
+
+}
